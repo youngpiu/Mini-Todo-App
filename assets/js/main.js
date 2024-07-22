@@ -24,6 +24,7 @@ function toggleEditMode(todoDiv, editButton, todoContent, isEditMode) {
     editButton.style.background = '#f5728b';
     editButtonIcon.setAttribute('src', './assets/icons/edit.svg');
     todoContent.setAttribute('readonly', true);
+    FuiToast.success('Saved changes successfully!');
   }
 }
 
@@ -57,6 +58,7 @@ function removeTodoHandler(id) {
   const index = todos.findIndex((todo) => todo.id === id);
   if (index !== -1) {
     todos.splice(index, 1);
+    FuiToast.success('Removed task successfully');
     saveTodos();
     renderTodos();
   }
