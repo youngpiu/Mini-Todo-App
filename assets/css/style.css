@@ -256,6 +256,7 @@ body {
   color: #3a3939;
   user-select: none;
   cursor: default;
+  text-overflow: ellipsis;
 }
 
 .todo__button {
